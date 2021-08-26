@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: 'partners backend'
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: neoru4
+    password: change.me
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  http2:
+    enabled: true
+  port: 8080
+
+graphql:
+    spqr:
+      gui:
+        enabled: true
+
+
+
+
+

@@ -1,0 +1,15 @@
+version: '0.0.1'
+
+services:
+  pg_db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: neoru4
+      POSTGRES_PASSWORD: change.me
+      POSTGRES_DB: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - ${POSTGRES_PORT:-5432}:5432
